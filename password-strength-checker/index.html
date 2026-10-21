@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RJK Security Lab | Password Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="brand">
+
+            <span class="brand-icon">⌁</span>
+
+            <span>
+                RJK<span class="blue">SEC</span>
+            </span>
+
+        </div>
+
+
+        <div class="status">
+
+            <span class="status-dot"></span>
+
+            SYSTEM ONLINE
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="container">
+
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero">
+
+            <p class="eyebrow">
+                CYBERSECURITY // LOCAL ANALYSIS
+            </p>
+
+
+            <h1>
+
+                PASSWORD
+
+                <span>STRENGTH</span>
+
+                ANALYZER
+
+            </h1>
+
+
+            <p class="subtitle">
+
+                Test your password security instantly.
+                Your password is analyzed locally
+                and never stored.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- ================= ANALYZER ================= -->
+
+        <section class="analyzer-card">
+
+
+            <!-- CARD HEADER -->
+
+            <div class="card-header">
+
+                <div>
+
+                    <p class="card-label">
+                        SECURITY CHECK
+                    </p>
+
+                    <h2>
+                        Analyze Password
+                    </h2>
+
+                </div>
+
+
+                <div class="lock-icon">
+                    🔒
+                </div>
+
+            </div>
+
+
+
+            <!-- PASSWORD INPUT -->
+
+            <div class="input-wrapper">
+
+                <input
+                    type="password"
+                    id="passwordInput"
+                    placeholder="Enter a password..."
+                    autocomplete="off"
+                >
+
+
+                <button
+                    id="togglePassword"
+                    class="eye-button"
+                    type="button"
+                    aria-label="Show or hide password"
+                >
+                    ◉
+                </button>
+
+            </div>
+
+
+
+            <!-- ================= STRENGTH ================= -->
+
+            <div class="strength-section">
+
+
+                <div class="strength-top">
+
+                    <span>
+                        SECURITY LEVEL
+                    </span>
+
+
+                    <span id="strengthText">
+                        WAITING
+                    </span>
+
+                </div>
+
+
+
+                <div class="strength-bar">
+
+                    <div id="strengthFill"></div>
+
+                </div>
+
+
+
+                <div class="score-row">
+
+                    <span>
+                        Security Score
+                    </span>
+
+
+                    <strong id="score">
+                        0/6
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= COMMON PASSWORD WARNING ================= -->
+
+            <div
+                id="commonWarning"
+                class="common-warning"
+            >
+
+                <span class="common-warning-icon">
+                    ⚠️
+                </span>
+
+
+                <div>
+
+                    <strong>
+                        COMMONLY USED PASSWORD
+                    </strong>
+
+
+                    <p id="commonWarningText">
+
+                        This password appears in the
+                        Top 200 commonly used password list.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= REQUIREMENTS ================= -->
+
+            <div class="requirements">
+
+                <p class="section-title">
+                    PASSWORD REQUIREMENTS
+                </p>
+
+
+                <div class="requirement-grid">
+
+
+                    <div
+                        class="requirement"
+                        id="lengthCheck"
+                    >
+
+                        <span class="check">
+                            ×
+                        </span>
+
+                        <span>
+                            8+ characters
+                        </span>
+
+                    </div>
+
+
+
+                    <div
+                        class="requirement"
+                        id="uppercaseCheck"
+                    >
+
+                        <span class="check">
+                            ×
+                        </span>
+
+                        <span>
+                            Uppercase letter
+                        </span>
+
+                    </div>
+
+
+
+                    <div
+                        class="requirement"
+                        id="lowercaseCheck"
+                    >
+
+                        <span class="check">
+                            ×
+                        </span>
+
+                        <span>
+                            Lowercase letter
+                        </span>
+
+                    </div>
+
+
+
+                    <div
+                        class="requirement"
+                        id="numberCheck"
+                    >
+
+                        <span class="check">
+                            ×
+                        </span>
+
+                        <span>
+                            Number
+                        </span>
+
+                    </div>
+
+
+
+                    <div
+                        class="requirement"
+                        id="specialCheck"
+                    >
+
+                        <span class="check">
+                            ×
+                        </span>
+
+                        <span>
+                            Special character
+                        </span>
+
+                    </div>
+
+
+
+                    <div
+                        class="requirement"
+                        id="longCheck"
+                    >
+
+                        <span class="check">
+                            ×
+                        </span>
+
+                        <span>
+                            12+ characters
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= SUGGESTION ================= -->
+
+            <div class="suggestion-box">
+
+                <span class="suggestion-icon">
+                    ⚡
+                </span>
+
+
+                <div>
+
+                    <strong>
+                        Security suggestions
+                    </strong>
+
+
+                    <p id="suggestionText">
+
+                        Start typing to analyze your password.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= PRIVACY ================= -->
+
+            <div class="privacy-note">
+
+                <span>
+                    🛡
+                </span>
+
+
+                <span>
+                    Your password is processed
+                    locally in your browser.
+                </span>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= INFO CARDS ================= -->
+
+        <section class="info-grid">
+
+
+            <div class="info-card">
+
+                <span>
+                    01
+                </span>
+
+                <h3>
+                    Local Analysis
+                </h3>
+
+                <p>
+                    Password evaluation happens
+                    directly inside your browser.
+                </p>
+
+            </div>
+
+
+
+            <div class="info-card">
+
+                <span>
+                    02
+                </span>
+
+                <h3>
+                    Real-Time Feedback
+                </h3>
+
+                <p>
+                    Security requirements update
+                    instantly while you type.
+                </p>
+
+            </div>
+
+
+
+            <div class="info-card">
+
+                <span>
+                    03
+                </span>
+
+                <h3>
+                    Common Password Detection
+                </h3>
+
+                <p>
+                    The analyzer checks passwords
+                    against a locally stored common-password list.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <span>
+            RJK SECURITY LAB
+        </span>
+
+        <span>
+            •
+        </span>
+
+        <span>
+            PASSWORD ANALYZER v1.1
+        </span>
+
+    </footer>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="common-passwords.js"></script>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

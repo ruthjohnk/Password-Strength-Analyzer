@@ -1,0 +1,1206 @@
+/* ==========================================
+   GLOBAL
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+body {
+    min-height: 100vh;
+    width: 100%;
+
+    overflow-x: hidden;
+
+    font-family: "Inter", sans-serif;
+
+    color: #e8f5ff;
+
+    background:
+        linear-gradient(
+            rgba(2, 7, 13, 0.82),
+            rgba(2, 7, 13, 0.94)
+        ),
+        url("https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?auto=format&fit=crop&w=2400&q=85");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
+}
+
+
+/* ==========================================
+   VARIABLES
+========================================== */
+
+:root {
+
+    --blue: #00aaff;
+
+    --bright-blue: #42c8ff;
+
+    --dark: #02070d;
+
+    --card: rgba(5, 15, 25, 0.88);
+
+    --border: rgba(0, 170, 255, 0.25);
+
+    --text: #e8f5ff;
+
+    --muted: #7891a5;
+
+    --red: #ff5c5c;
+
+    --green: #00e676;
+
+    --yellow: #ffc857;
+
+}
+
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar {
+
+    width: 100%;
+
+    height: 72px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    border-bottom:
+        1px solid rgba(0, 170, 255, 0.15);
+
+    background:
+        rgba(2, 7, 13, 0.7);
+
+    backdrop-filter: blur(15px);
+
+}
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.brand-icon {
+
+    color: var(--blue);
+
+    font-size: 28px;
+
+}
+
+
+.blue {
+
+    color: var(--blue);
+
+}
+
+
+.status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #7fa0b8;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.status-dot {
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    box-shadow:
+        0 0 10px var(--green);
+
+}
+
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.container {
+
+    width: min(1050px, 90%);
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding: 70px 0 50px;
+
+}
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+
+}
+
+
+.eyebrow {
+
+    color: var(--blue);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.hero h1 {
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: clamp(32px, 5vw, 58px);
+
+    line-height: 1.15;
+
+    letter-spacing: 2px;
+
+}
+
+
+.hero h1 span {
+
+    color: var(--blue);
+
+    text-shadow:
+        0 0 25px rgba(0, 170, 255, 0.35);
+
+}
+
+
+.subtitle {
+
+    max-width: 600px;
+
+    margin: 20px auto 0;
+
+    color: var(--muted);
+
+    line-height: 1.7;
+
+    font-size: 14px;
+
+}
+
+
+/* ==========================================
+   ANALYZER CARD
+========================================== */
+
+.analyzer-card {
+
+    width: 100%;
+
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    padding: 35px;
+
+    background: var(--card);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 20px;
+
+    box-shadow:
+
+        0 25px 70px rgba(0, 0, 0, 0.45),
+
+        inset 0 0 40px rgba(0, 170, 255, 0.025);
+
+    backdrop-filter: blur(20px);
+
+    overflow: hidden;
+
+}
+
+
+/* ==========================================
+   CARD HEADER
+========================================== */
+
+.card-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+
+}
+
+
+.card-label {
+
+    color: var(--blue);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.card-header h2 {
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 22px;
+
+}
+
+
+.lock-icon {
+
+    font-size: 26px;
+
+    opacity: 0.8;
+
+}
+
+
+/* ==========================================
+   PASSWORD INPUT
+========================================== */
+
+.input-wrapper {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 100%;
+
+}
+
+
+.input-wrapper input {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    height: 58px;
+
+    padding: 0 60px 0 18px;
+
+    border-radius: 12px;
+
+    border:
+        1px solid rgba(0, 170, 255, 0.25);
+
+    background:
+        rgba(0, 0, 0, 0.35);
+
+    color: white;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 15px;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    transition: 0.25s ease;
+
+}
+
+
+.input-wrapper input::placeholder {
+
+    color: #536b7c;
+
+}
+
+
+.input-wrapper input:focus {
+
+    border-color: var(--blue);
+
+    box-shadow:
+
+        0 0 0 3px rgba(0, 170, 255, 0.08),
+
+        0 0 25px rgba(0, 170, 255, 0.12);
+
+}
+
+
+/* ==========================================
+   SHOW / HIDE BUTTON
+========================================== */
+
+.eye-button {
+
+    position: absolute;
+
+    right: 8px;
+
+    top: 8px;
+
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background:
+        rgba(0, 170, 255, 0.08);
+
+    color: var(--blue);
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: 0.2s ease;
+
+}
+
+
+.eye-button:hover {
+
+    background:
+        rgba(0, 170, 255, 0.16);
+
+    box-shadow:
+        0 0 15px rgba(0, 170, 255, 0.15);
+
+}
+
+
+/* ==========================================
+   STRENGTH
+========================================== */
+
+.strength-section {
+
+    margin-top: 28px;
+
+}
+
+
+.strength-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color: #6f899b;
+
+}
+
+
+#strengthText {
+
+    color: #71899c;
+
+}
+
+
+.strength-bar {
+
+    width: 100%;
+
+    height: 7px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+}
+
+
+#strengthFill {
+
+    width: 0%;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: var(--blue);
+
+    transition:
+
+        width 0.3s ease,
+
+        background 0.3s ease,
+
+        box-shadow 0.3s ease;
+
+}
+
+
+.score-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 10px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+}
+
+
+.score-row strong {
+
+    color: var(--text);
+
+}
+
+
+/* ==========================================
+   COMMON PASSWORD WARNING
+   YELLOW WARNING STYLE
+========================================== */
+
+.common-warning {
+
+    display: none;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border:
+        1px solid rgba(255, 200, 87, 0.55);
+
+    border-radius: 12px;
+
+    background:
+        rgba(255, 200, 87, 0.10);
+
+    color: #ffc857;
+
+    box-shadow:
+        0 0 18px rgba(255, 200, 87, 0.06);
+
+    animation:
+        warningAppear 0.25s ease;
+
+}
+
+
+.common-warning.show {
+
+    display: flex;
+
+}
+
+
+/* WARNING ICON */
+
+.common-warning-icon {
+
+    width: 30px;
+
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 200, 87, 0.16);
+
+    color: #ffc857;
+
+    font-size: 17px;
+
+    box-shadow:
+        0 0 12px rgba(255, 200, 87, 0.15);
+
+}
+
+
+/* WARNING TITLE */
+
+.common-warning strong {
+
+    display: block;
+
+    color: #ffd76a;
+
+    font-size: 11px;
+
+    letter-spacing: 1.3px;
+
+}
+
+
+/* WARNING DESCRIPTION */
+
+.common-warning p {
+
+    margin-top: 5px;
+
+    color: #bda86d;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+/* WARNING ANIMATION */
+
+@keyframes warningAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(-5px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================
+   REQUIREMENTS
+========================================== */
+
+.requirements {
+
+    margin-top: 30px;
+
+}
+
+
+.section-title {
+
+    margin-bottom: 13px;
+
+    color: #6f899b;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.7px;
+
+}
+
+
+.requirement-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    width: 100%;
+
+}
+
+
+.requirement {
+
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 14px;
+
+    border:
+        1px solid rgba(255, 70, 70, 0.35);
+
+    background:
+        rgba(255, 50, 50, 0.08);
+
+    border-radius: 10px;
+
+    color: #ff7777;
+
+    font-size: 13px;
+
+    transition:
+
+        0.25s ease,
+
+        border-color 0.25s ease,
+
+        background 0.25s ease,
+
+        color 0.25s ease,
+
+        transform 0.25s ease;
+
+}
+
+
+/* ==========================================
+   RED / REQUIREMENT NOT MET
+========================================== */
+
+.requirement:not(.valid) {
+
+    border-color:
+        rgba(255, 70, 70, 0.45);
+
+    background:
+        rgba(255, 50, 50, 0.08);
+
+    color: #ff7777;
+
+}
+
+
+.requirement:not(.valid) .check {
+
+    background:
+        rgba(255, 70, 70, 0.16);
+
+    color: var(--red);
+
+}
+
+
+/* ==========================================
+   GREEN / REQUIREMENT MET
+========================================== */
+
+.requirement.valid {
+
+    border-color:
+        rgba(0, 230, 118, 0.5);
+
+    background:
+        rgba(0, 230, 118, 0.09);
+
+    color: #4dff9a;
+
+    box-shadow:
+        0 0 12px rgba(0, 230, 118, 0.08);
+
+}
+
+
+.requirement.valid .check {
+
+    background:
+        rgba(0, 230, 118, 0.16);
+
+    color: var(--green);
+
+    box-shadow:
+        0 0 10px rgba(0, 230, 118, 0.2);
+
+}
+
+
+/* ==========================================
+   CHECK CIRCLE
+========================================== */
+
+.check {
+
+    width: 22px;
+
+    height: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    font-weight: 700;
+
+    font-size: 13px;
+
+}
+
+
+.requirement:hover {
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* ==========================================
+   SUGGESTION
+========================================== */
+
+.suggestion-box {
+
+    display: flex;
+
+    gap: 13px;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border:
+        1px solid rgba(0, 170, 255, 0.15);
+
+    border-radius: 12px;
+
+    background:
+        rgba(0, 170, 255, 0.05);
+
+}
+
+
+.suggestion-icon {
+
+    font-size: 18px;
+
+}
+
+
+.suggestion-box strong {
+
+    font-size: 13px;
+
+}
+
+
+.suggestion-box p {
+
+    margin-top: 5px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+/* ==========================================
+   PRIVACY
+========================================== */
+
+.privacy-note {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 20px;
+
+    color: #60798b;
+
+    font-size: 11px;
+
+    text-align: center;
+
+}
+
+
+/* ==========================================
+   INFO CARDS
+========================================== */
+
+.info-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+}
+
+
+.info-card {
+
+    min-width: 0;
+
+    padding: 22px;
+
+    border:
+        1px solid rgba(0, 170, 255, 0.14);
+
+    border-radius: 14px;
+
+    background:
+        rgba(5, 15, 25, 0.65);
+
+    backdrop-filter: blur(10px);
+
+}
+
+
+.info-card > span {
+
+    color: var(--blue);
+
+    font-family: "Orbitron", sans-serif;
+
+    font-size: 11px;
+
+}
+
+
+.info-card h3 {
+
+    margin: 12px 0 8px;
+
+    font-size: 15px;
+
+}
+
+
+.info-card p {
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 25px;
+
+    color: #536b7c;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    text-align: center;
+
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 800px) {
+
+    .container {
+
+        width: 92%;
+
+    }
+
+
+    .analyzer-card {
+
+        padding: 28px;
+
+    }
+
+
+    .info-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 700px) {
+
+    .navbar {
+
+        height: 65px;
+
+        padding: 0 5%;
+
+    }
+
+
+    .brand {
+
+        font-size: 15px;
+
+    }
+
+
+    .status {
+
+        font-size: 9px;
+
+    }
+
+
+    .container {
+
+        width: 92%;
+
+        padding-top: 45px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 34px;
+
+    }
+
+
+    .subtitle {
+
+        font-size: 13px;
+
+    }
+
+
+    .analyzer-card {
+
+        width: 100%;
+
+        padding: 22px;
+
+        border-radius: 16px;
+
+    }
+
+
+    .card-header h2 {
+
+        font-size: 19px;
+
+    }
+
+
+    .requirement-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .info-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+/* ==========================================
+   VERY SMALL SCREENS
+========================================== */
+
+@media (max-width: 400px) {
+
+    .container {
+
+        width: 94%;
+
+    }
+
+
+    .analyzer-card {
+
+        padding: 18px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 29px;
+
+    }
+
+
+    .card-header h2 {
+
+        font-size: 17px;
+
+    }
+
+
+    .input-wrapper input {
+
+        height: 54px;
+
+        padding-left: 14px;
+
+        padding-right: 55px;
+
+    }
+
+
+    .common-warning {
+
+        padding: 12px;
+
+    }
+
+
+    .common-warning strong {
+
+        font-size: 10px;
+
+    }
+
+
+    .common-warning p {
+
+        font-size: 11px;
+
+    }
+
+}
