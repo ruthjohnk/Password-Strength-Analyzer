@@ -170,7 +170,7 @@ A password classified as "Strong" by this application is not automatically secur
 
 ## 👩‍💻 Author
 
-**RJK**
+**Ruth John**
 
 Cybersecurity student building practical projects to explore **defensive security, web development, and cybersecurity engineering**.
 
