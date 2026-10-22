@@ -1,4 +1,4 @@
-# 🔐 Password Strength Analyzer
+# 🔐 RJKSEC - Password Strength Analyzer
 
 A modern browser-based **Password Strength Analyzer** built to demonstrate basic cybersecurity concepts through an interactive web application.
 
